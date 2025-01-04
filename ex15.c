@@ -16,8 +16,10 @@ int main(int argc, char* argv[])
   printf("---\n");
 
   //----------------------------------------
-  int* cur_age = ages;
-  char** cur_name = names;
+  int* cur_age = ages;    // ages 배열을 int 단위의 포인터로 읽겠다
+
+  // cur_name + 1 하면, char* names[] 의 두번째 원소를 가리키는 포인터
+  char** cur_name = names; // names 배열을 char 포인터의 포인터로 읽겠다
 
   for(i = 0; i < count; i++) {
     printf("%s is %d years old. \n", *(cur_name + i), *(cur_age + i));
