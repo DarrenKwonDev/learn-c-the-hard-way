@@ -1,0 +1,22 @@
+#undef NDEBUG
+#include <stdio.h>
+#include <assert.h>
+#include "dbg.h"
+
+
+void copy(char to[], char from[]) {
+
+}
+
+int safercopy(int from_len, char *from, int to_len, char *to) {
+
+}
+
+
+
+int main(int argc, char* argv[]) {
+  return 0;
+
+error:
+  return 1;
+}
