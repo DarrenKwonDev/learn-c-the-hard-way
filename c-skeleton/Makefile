@@ -21,6 +21,7 @@ SO_TARGET=$(patsubst %.a,%.so,$(TARGET))
 # The Target Build
 
 # prereq정의
+# TARGET 을 만들고, SO_TARGET을 만들고, .phony에 등록된 test를 진행함.
 all: $(TARGET) $(SO_TARGET) tests
 
 # 아래 지정한 CFLAGS를 기반으로 make all을 수행함
@@ -51,7 +52,7 @@ $(SO_TARGET): $(OBJECTS)
 # tests: CFLAGS += $(TARGET)
 tests: LDFLAGS += $(TARGET)
 tests: $(TESTS)
-	sh ./tests/runtests.sh
+	sh ./tests/runtests.sh # 테스트 실행하는 shell
 
 
 # ------------------------------------------------
